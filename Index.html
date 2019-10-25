@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Our Website</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link href="icon.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script src="fontawesome.js"></script>
+    <link rel="stylesheet" type="text/css" href="animate.css">
+
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	height: 5300px;
+	outline: none;
+	background: url("https://cdn.pixabay.com/photo/2016/09/26/14/15/background-1696064__340.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -9;
+}
+#big_div {
+	transition: .5s;
+}
+#title {
+	padding: 3% 3%;
+	background-size: 90%;
+}
+#nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	background-color: white;
+	transition: .5s;
+	z-index: 10;
+}
+#nav p {
+	padding: 1% 1%;
+	font-size: 200%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#background {
+	opacity: .9;
+	height: 120%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#name {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	width: 100%;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 300%;
+	font-weight: bold;
+	transform: translate(-50% , -50%);
+}
+#shape1 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%
+}
+.links {
+	color: white;
+	width: 10%;
+	font-size: 50%;
+	padding: 1%;
+	background: none;
+	border: solid 2px purple;
+	border-radius: 30px;
+	transition: 1s;
+	outline: none;
+}
+.links:hover {
+	background-color: rgb(0,0,0,.5);
+}
+#menu_icon {
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	z-index: 10;
+	font-size: 300%;
+	cursor: pointer;
+}
+#menu_icon2 {
+	position: absolute;
+	top: 20%;
+	right: 2%;
+	z-index: 11;
+	font-size: 300%;
+	cursor: pointer;
+}
+#menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 0;
+	background-color: grey;
+	transition: .5s;
+	z-index: 100;
+}
+#exit_menu {
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	right: 3%;
+	font-size: 200%;
+}
+#social {
+	position: fixed;
+	bottom: 3%;
+	right: 3%;
+	font-size: 300%;
+	display: none;
+	cursor: pointer;
+}
+#contect {
+	border-radius: 30px;
+	height: 70%;
+	width: 90%;
+	background-color: white;
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	transform: translate(-50% , 0);
+  	padding: 10px;
+  	box-shadow: 0px 0px 50px 0px #888888;
+}
+#contect h3 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: 600;
+}
+.div_contect {
+	padding: 1%;
+	border-radius: 5%;
+	margin: 1.5% 1.5%;
+	display: inline-block;
+	height: 75%;
+	width: 30%;
+	border: solid 1px;
+}
+#html {
+	position: absolute;
+	bottom: 1%;
+}
+#css {
+	position: absolute;
+	bottom: 1%;
+	left: 33%;
+}
+#js {
+	position: absolute;
+	bottom: 1%;
+	left: 66%;
+}
+#html_icon {
+	font-size: 500%;
+	color: red;
+}
+#css_icon {
+	font-size: 500%;
+	color: #66ccff;
+}
+#js_icon {
+	font-size: 500%;
+	color: #ffff00;
+}
+#media {
+	position: absolute;
+	left: 3%;
+	bottom: 3%;
+}
+.p1 {
+	font-size: 30px;
+}
+.p2 {
+	font-size: 20px;
+}
+#staff {
+	position: absolute;
+	top: 200%;
+	left: 15%;
+}
+.un_active {
+	opacity: .5;
+	height: 400px;
+	width: 300px;
+	transition: 1s;
+}
+#active {
+	position: relative;
+	opacity: 1;
+	height: 600px;
+	transition: 1s;
+	z-index: 4;
+}
+.cv_b {
+	font-size: 300%;
+	cursor: pointer;
+}
+.p_active {
+	font-size: 200%;
+	transition: .5s;
+	height: 0;
+	overflow: hidden;
+}
+#p4 {
+	height: 300px;
+}
+#staff h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#container {
+	background-color: white;
+	position: absolute;
+	top: 330%;
+	left: 50%;
+	transform: translate(-50%);
+	box-shadow: 0px 0px 50px 0px #888888;
+	padding: 100px;
+	border-radius: 30px;
+}
+.faq {
+	font-size: 30px;
+	border: solid 1px;
+	padding: 20px;
+	width: 1500px;
+	background-color: grey;
+	border-radius: 30px;
+	color: white;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+.plus {
+	font-size: 100%;
+	float: right;
+}
+#minus1 {
+	display: none;
+}
+#minus2 {
+	display: none;
+}
+#minus3 {
+	display: none;
+}
+#contect1 {
+	font-size: 200%;
+	height: 0;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+}
+#contect2 {
+	font-size: 200%;
+	height: 0;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+}
+#contect3 {
+	font-size: 200%;
+	height: 0;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+}
+#d1 {
+	height: 60px;
+	width: 60px;
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	transition: .5s;
+	overflow: hidden;
+	z-index: 200;
+}
+#d2 {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	bottom: 0;
+}
+.d3 {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	position: absolute;
+	transition: .5s;
+	margin-top: -10px;
+}
+#d4 {
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%);
+}
+#d5 {
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%);
+}
+#d6 {
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%);
+}
+#users {
+	position: absolute;
+	bottom: 30%;
+	left: 19%;
+	font-size: 200%;
+	color: white;
+}
+.s_icon {
+	font-size: 140%;
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+}
+footer {
+	padding: 2%;
+	font-size: 150%;
+	position: absolute;
+	top: 5000px;
+	width: 100%;
+	color: white;
+	background-color: rgb(0,0,0,.8);
+}
+footer i {
+	margin: .5%;
+	padding: .5%;
+	border-radius: 50%;
+	border: solid 1px white;
+	font-size: 150%;
+	transition: .5s;
+	cursor: pointer;
+	color: white;
+}
+footer i:hover {
+	background-color: white;
+	color: rgb(0,0,0,.8);
+}
+#face1:hover {
+	color: #3399ff;
+}
+#twit1:hover {
+	color: #17a2b8;
+}
+#you1:hover {
+	color: red;
+}
+@media (max-width: 1440px) {
+	.p1 {
+		font-size: 28px;
+	}
+	#staff {
+		left: 5%;
+	}
+	#container {
+		padding: 10px;
+	}
+	.faq {
+		width: 1200px;
+		font-size: 200%;
+	}
+	#contect1 {
+		font-size: 160%;
+	}
+	#contect2 {
+		font-size: 160%;
+	}
+	#contect3 {
+		font-size: 160%; 
+	}
+}
+@media (max-width: 1024px) {
+	#active {
+		height: 400px;
+	}
+	.un_active {
+		height: 200px;
+		width: 200px;
+	}
+	.p1 {
+		font-size: 20px;
+	}
+	#container {
+		padding: 10px;
+	}
+	.faq {
+		width: 900px;
+		font-size: 150%;
+	}
+	#contect1 {
+		font-size: 150%;
+	}
+	#contect2 {
+		font-size: 150%;
+	}
+	#contect3 {
+		font-size: 150%; 
+	}
+	footer i {
+		padding: 2%;
+	}
+	.links {
+		font-size: 40%;
+	}
+}
+@media (max-width: 768px) {
+	#team_name {
+		font-size: 80%;
+	}
+	.links {
+		width: 20%
+	}
+	#contect {
+		height: 140%;
+	}
+	#contect h3 {
+		font-size: 150%;
+	}
+	#html {
+		width: 85%;
+		height: 280px;
+		position: absolute;
+		top: 10%;
+		left: 5%;
+	}
+	#css {
+		width: 85%;
+		height: 280px;
+		position: absolute;
+		top: 40%;
+		left: 5%;
+	}
+	#js {
+		width: 85%;
+		height: 280px;
+		position: absolute;
+		top: 70%;
+		left: 5%;
+	}
+	#staff {
+		top: 250%;
+		left: 0%;
+	}
+	#active {
+		height: 280px;
+	}
+	.un_active {
+		height: 200px;
+		width: 200px;
+	}
+	#container {
+		padding: 10px;
+	}
+	.faq {
+		width: 700px;
+		font-size: 100%;
+	}
+	#contect1 {
+		font-size: 100%;
+	}
+	#contect2 {
+		font-size: 100%;
+	}
+	#contect3 {
+		font-size: 100%; 
+	}
+	footer i {
+		padding: 2%;
+	}
+}
+@media (max-width: 425px) {
+	.p1 {
+		font-size: 17px;
+	}
+	.p2 {
+		font-size: 13px;
+		margin-top: -36px;
+	}
+	#staff {
+		left: 4%;
+		top: 260%;
+	}
+	#active {
+		height: 150px;
+	}
+	.un_active {
+		height: 95px;
+		width: 95px;
+	}
+	.cv_b {
+		font-size: 90%;
+	}
+	.p_active {
+		font-size: 100%;
+	}
+	#container {
+		padding: 10px;
+	}
+	.faq {
+		top: 300%;
+		width: 370px;
+		font-size: 100%;
+	}
+	#contect1 {
+		font-size: 100%;
+	}
+	#contect2 {
+		font-size: 100%;
+	}
+	#contect3 {
+		font-size: 100%; 
+	}
+	#d1 {
+	    height: 50px;
+	    width: 50px;
+	    bottom: 3%;
+	    right: 3%;
+	}
+	#d2 {
+	    height: 50px;
+	    width: 50px;
+	}
+	#users {
+	   bottom: 24%;
+	   left: 15%;
+	   font-size: 170%;
+	}
+	footer i {
+		padding: 3%;
+	}
+	.links {
+		width: 40%;
+    	height: 60px;
+	}
+	body {
+		height: 100%;
+	}
+	footer {
+		position: absolute;
+    	top: 390%;
+	}
+	#contect {
+    	height: 120%;
+	}
+	#nav p {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 375px) {
+	.p1 {
+		font-size: 17px;
+	}
+	.p2 {
+		font-size: 13px;
+		margin-top: -23px;
+	}
+	#staff {
+		left: 4%;
+		top: 250%;
+	}
+	#active {
+		height: 120px;
+	}
+	.un_active {
+		height: 85px;
+		width: 85px;
+	}
+	.cv_b {
+		font-size: 90%;
+	}
+	.p_active {
+		font-size: 100%;
+	}
+	#container {
+		padding: 10px;
+		top: 300%;
+	}
+	.faq {
+		width: 280px;
+		font-size: 100%;
+	}
+	#contect1 {
+		font-size: 90%;
+	}
+	#contect2 {
+		font-size: 90%;
+	}
+	#contect3 {
+		font-size: 90%; 
+	}
+	#contect {
+		height: 1200px;
+	}
+	#d1 {
+	    height: 50px;
+	    width: 50px;
+	    bottom: 3%;
+	    right: 3%;
+	}
+	#d2 {
+	    height: 50px;
+	    width: 50px;
+	}
+	#users {
+	    bottom: 27%;
+	    left: 17%;
+	    font-size: 170%;
+	}
+	.links {
+		font-size: 45%;
+    	height: 70px;
+    	width: 150px;
+	}
+	#html {
+		height: 300px;
+	}
+	#css {
+		height: 300px;
+	}
+	#js {
+		height: 300px;
+	}
+	footer i {
+		padding: 3%;
+	}
+	#nav p {
+		top: 15px;
+    	font-size: 150%;
+    	font-weight: 1000;
+    	position: absolute;
+	}
+	footer {
+		top: 364.7%;
+	}
+	body{
+		height: 3600px;
+	}
+}
+@media (max-width: 320px) {
+	#team_name {
+		font-size: 65%;
+	}
+	.links {
+		width: 40%;
+    	font-size: 20px;
+	}
+	.p1 {
+		font-size: 12px;
+	}
+	#active {
+		height: 100px;
+	}
+	#staff {
+		left: 5%;
+		top: 240%;
+	}
+	.un_active {
+		height: 65px;
+		width: 65px;
+	}
+	.cv_b {
+		font-size: 90%;
+	}
+	.p_active {
+		font-size: 100%;
+	}
+	#container {
+		top: 300%;
+		padding: 10px;
+	}
+	.faq {
+		width: 280px;
+		font-size: 100%;
+	}
+	#contect1 {
+		font-size: 80%;
+	}
+	#contect2 {
+		font-size: 80%;
+	}
+	#contect3 {
+		font-size: 80%; 
+	}
+	#contect {
+		height: 1100px;
+	}
+	#d1 {
+	    height: 50px;
+	    width: 50px;
+	    bottom: 3%;
+	    right: 3%;
+	}
+	#d2 {
+	    height: 50px;
+	    width: 50px;
+	}
+	#users {
+	    bottom: 27%;
+	    left: 17%;
+	}
+	footer i {
+		padding: 3%;
+	}
+	#contect h3 {
+    	font-size: 120%;
+    	margin-top: 30px;
+	}
+	#html_icon , #css_icon , #js_icon {
+		padding: 10px;
+		font-size: 400%;
+	}
+}
+</style>
+</head>
+<body id="body1">
+	<div id="menu">
+		<i class="fas fa-times" id="exit_menu" onclick="close_menu()"></i>
+	</div>
+	<div id="big_div">
+	<i class="fas fa-bars" id="menu_icon" onclick="menu()"></i>
+	<div id="nav">
+		<p>Future Developers</p>
+		<i class="fas fa-bars" id="menu_icon2" onclick="menu()"></i>
+	</div>
+	<div id="title">
+		<center>
+			<div id="name">
+			<span id="team_name">Future Developers</span><br><br>
+			<button class="links">Home</button>
+			<a href="#staff"><button class="links">Our Staff</button></a>
+			<button class="links">Quiz</button>
+			<button class="links">Courses</button>
+		</div>
+		</center>
+		<img src="b6.jpg" id="background">
+	</div>
+	<div id="contect">
+		<center>
+			<h3>Languages we will teach</h3><br>
+		</center>
+		<div class="div_contect wow zoomInLeft" id="html">
+			<center>
+				<i class="fab fa-html5" id="html_icon"></i><br><br><br>
+				<p class="p1">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</p>
+				<br><br>
+				<p class="p2">Teached by : Example</p>
+			</center>
+		</div>
+		<div class="div_contect wow zoomIn" id="css">
+			<center>
+				<i class="fab fa-css3-alt" id="css_icon"></i><br><br>
+				<p class="p1">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+				<br><br>
+				<p class="p2">Teached by : Example</p>
+			</center>
+		</div>
+		<div class="div_contect wow zoomInRight" id="js">
+			<center>
+				<i class="fab fa-js-square" id="js_icon"></i><br><br>
+				<p class="p1">JavaScript is a programming language that adds interactivity to your website (for example games, responses when buttons are pressed ,etc)</p>
+				<br><br>
+				<p class="p2">Teached by : Example</p>
+			</center>
+		</div>
+	</div>
+	<div id="d1" onmouseover="x()" onmouseout="z()">
+		<div class="d3" id="d4"><i class="fab fa-facebook s_icon"></i></div>
+		<div class="d3" id="d5"><i class="fab fa-youtube s_icon"></i></div>
+		<div class="d3" id="d6"><i class="fab fa-twitter s_icon"></i></div>
+		<div id="d2"><i class="fas fa-users" id="users"></i></div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<div id="staff">
+		<br><br><br><br><br>
+		<center>
+			<h1>Our Staff</h1>
+			<i class="fas fa-angle-left cv_b" onclick="b()"></i>&nbsp;&nbsp;&nbsp;
+			<img src="avatar.jpg" class="un_active" id="un_active1">
+			<img src="avatar2.jpg" id="active">
+			<img src="avatar3.jpg" class="un_active" id="un_active2">&nbsp;&nbsp;&nbsp;
+			<i class="fas fa-angle-right cv_b" onclick="a()"></i>
+			<div id="p3" class="p_active">Some Text 1 <br>Age : 10 years old<br>School : School 1</div>
+			<div id="p4" class="p_active">Some Text 2 <br>Age : 15 years old<br>School : School 2</div>
+			<div id="p5" class="p_active">Some Text 3 <br>Age : 16 years old<br>School : School 3</div>
+		</center>
+	</div>
+	<div id="container">
+		<h1>FAQ</h1>
+		<div class="faq" onclick="b1()">
+			Who are we ?<i class="fas fa-plus plus"  id="plus1"></i><i class="fas fa-minus plus"  id="minus1"></i></div>
+		<div id="contect1">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are a team consisting of young elements working under the PentaCoders team.
+		</div>
+		<div class="faq" onclick="b2()">
+			What are our ambitions ?<i class="fas fa-plus plus"  id="plus2"></i><i class="fas fa-minus plus"  id="minus2"></i></div>
+		<div id="contect2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We look forward to producing young people who are able to understand the basics of web development.
+		</div>
+		<div class="faq" onclick="b3()">
+			What languages ​​will be taught?<i class="fas fa-plus plus"  id="plus3"></i><i class="fas fa-minus plus"  id="minus3"></i></div>
+		<div id="contect3">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We teach the basics of HTML, CSS and Java Script as well as some toolkit such as Bootstrap.
+		</div>
+	</div>
+	<footer>
+		<center>
+			<p>Developed by : Team Name</p>
+			<p>Contact us</p>
+			<i class="fab fa-facebook" id="face1"></i>
+			<i class="fab fa-twitter" id="twit1"></i>
+			<i class="fab fa-youtube" id="you1"></i><br><br><br><br>
+			<p>Back to top</p>
+			<a href="#body1"><i class="fas fa-chevron-up"></i></a>
+		</center>
+	</footer>
+  	<script src="jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="wow.js"></script>
+    <script>
+         new WOW().init();
+    </script>
+    <script type="text/javascript">
+    	$(document).ready(function(){$('.fixed-action-btn').floatingActionButton();});
+    </script>
+    </body>
+</body>
+</html>
